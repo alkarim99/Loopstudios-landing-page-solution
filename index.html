@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Loopstudios landing page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {padding: 10px; font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="nav">
+        <img class="logo" src="images/logo.svg" alt="logo">
+        <ul class="menu">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+        <img class="hamburger" src="images/icon-hamburger.svg" alt="icon-hamburger">
+        <img class="close" src="images/icon-close.svg" alt="icon-close">
+      </div>
+      <div class="hero-desc">
+        <p>Immersive experiences that deliver</p>
+      </div>
+    </section>
+
+    <section class="interactive">
+      <img class="interactive-img" alt="interactive">
+      <div class="interactive-desc">
+        <p class="header">The leader in interactive VR</p>
+        <p class="desc">Founded in 2011, Loopstudios has been producing world-class virtual reality projects for some of the best companies around the globe. Our award-winning creations have transformed businesses through digital experiences that bind to their brand.</p>
+      </div>
+    </section>
+
+    <section class="creations">
+      <h1 class="header">Our creations</h1>
+      <a href="#" class="see">See all</a>
+      <div class="card deep-earth">
+        <div class="overlay"></div>
+        <p class="title">Deep earth</p>
+      </div>
+      <div class="card night-arcade">
+        <div class="overlay"></div>
+        <p class="title">Night arcade</p>
+      </div>
+      <div class="card soccer-team">
+        <div class="overlay"></div>
+        <p class="title">Soccer team VR</p>
+      </div>
+      <div class="card the-grid">
+        <div class="overlay"></div>
+        <p class="title">The grid</p>
+      </div>
+      <div class="card from-above">
+        <div class="overlay"></div>
+        <p class="title">From up above VR</p>
+      </div>
+      <div class="card pocket-borealis">
+        <div class="overlay"></div>
+        <p class="title">Pocket borealis</p>
+      </div>
+      <div class="card curiosity">
+        <div class="overlay"></div>
+        <p class="title">The curiosity</p>
+      </div>
+      <div class="card fisheye">
+        <div class="overlay"></div>
+        <p class="title">Make it fisheye</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="images/logo.svg" alt="logo">
+    <div class="social">
+      <img src="images/icon-facebook.svg" alt="icon-facebook">
+      <img src="images/icon-twitter.svg" alt="icon-twitter">
+      <img src="images/icon-pinterest.svg" alt="icon-pinterest">
+      <img src="images/icon-instagram.svg" alt="icon-instagram">
+    </div>
+    <ul class="menu">
+      <li class="about"><a href="#">About</a></li>
+      <li><a href="#">Careers</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Products</a></li>
+      <li><a href="#">Support</a></li>
+    </ul>
+    <p class="copy">© 2021 Loopstudios. All rights reserved.</p>
+  </footer>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Abdullah Al-Karim</a>.
+  </div>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const close = document.querySelector('.close');
+    const nav = document.querySelector('.nav');
+    const menu = document.querySelector('.hero .nav ul.menu');
+
+    hamburger.addEventListener('click', openMenu);
+    close.addEventListener('click', closeMenu);
+
+    function openMenu() {
+      hamburger.style.display = 'none';
+      close.style.display = 'block';
+      nav.classList.remove('nav');
+      nav.classList.add('nav-menu');
+      menu.style.display = 'block';
+      menu.style.marginTop = '30px';
+    }
+
+    function closeMenu() {
+      hamburger.style.display = 'block';
+      close.style.display = 'none';
+      nav.classList.remove('nav-menu');
+      nav.classList.add('nav');
+      menu.style.display = 'none';
+    }
+
+  </script>
+</body>
+</html>
